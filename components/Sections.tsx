@@ -78,8 +78,60 @@ export default function Sections() {
         </div>
       </section>
 
+      {/* SCENE 04 — TEAM */}
+      <section id="team" data-scene="team" className="scene">
+        <div className="scene-inner">
+          <Reveal>
+            <div className="kicker">04 — Team · The Founders</div>
+            <h2 className="section-title">Meet the visionaries</h2>
+            <p className="section-sub">
+              The people behind Holocene Films.
+            </p>
+          </Reveal>
+          <div className="grid-2">
+            <div className="card reveal" style={{ padding: 0, overflow: "hidden" }}>
+              <img
+                src="/team/weaam-williams.jpg"
+                alt="Weaam Williams"
+                style={{ width: "100%", aspectRatio: "4/3", objectFit: "cover", display: "block" }}
+              />
+              <div style={{ padding: "24px" }}>
+                <h3 style={{ fontSize: 26, marginBottom: 4 }}>Weaam Williams</h3>
+                <p style={{ fontSize: 15, color: "#00F5C0", marginBottom: 14, letterSpacing: "0.08em" }}>CEO</p>
+                <p style={{ fontSize: 14.5, lineHeight: 1.7, opacity: 0.85 }}>
+                  Weaam Williams is an award-winning screenwriter, director, actor and poet. She has found her voice
+                  as a woman and activist using cinema, and launched her "Two Hues" feature film as Africa&apos;s first Web3
+                  film project. She is passionate about transformation in the film and arts sector, and is hence
+                  embracing Web3 technology and advocating for its growth on the continent. She has won numerous
+                  international awards for her works and expertise in the industry, such as "Two Hues", "District Six
+                  Rising from the Dust" and "Hip hop Revolution".
+                </p>
+              </div>
+            </div>
+            <div className="card reveal" style={{ padding: 0, overflow: "hidden" }}>
+              <img
+                src="/team/nafia-kocks.jpg"
+                alt="Nafia Kocks"
+                style={{ width: "100%", aspectRatio: "4/3", objectFit: "cover", display: "block" }}
+              />
+              <div style={{ padding: "24px" }}>
+                <h3 style={{ fontSize: 26, marginBottom: 4 }}>Nafia Kocks</h3>
+                <p style={{ fontSize: 15, color: "#7A5CFF", marginBottom: 14, letterSpacing: "0.08em" }}>CTO</p>
+                <p style={{ fontSize: 14.5, lineHeight: 1.7, opacity: 0.85 }}>
+                  Nafia is certified in blockchain, cryptography, Rust and Solidity. He is an avid developer and creative
+                  in the Web3 space. He has worked as a cinematographer and editor in the film industry for the past 16
+                  years. He is the cinematographer and finishing editor for the award-winning films, "Hip hop Revolution",
+                  "District Six Rising from the Dust" and "Two Hues". He works as a finishing editor on feature films and
+                  TV magazine shows.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* LIVE NETWORK — deployed ecosystem */}
-      <section id="network" data-scene="timeline" className="scene">
+      <section id="network" data-scene="team" className="scene">
         <div className="scene-inner">
           <Reveal>
             <div className="kicker">Live — The Ecosystem</div>
@@ -118,7 +170,7 @@ export default function Sections() {
       <section id="consult" data-scene="consult" className="scene">
         <div className="scene-inner">
           <div className="consult-box reveal">
-            <div className="kicker">04 — AI Consultations · One-on-One</div>
+            <div className="kicker">05 — AI Consultations · One-on-One</div>
             <h2 className="section-title">Unlock AI for your business</h2>
             <p className="section-sub">
               Book a 30-minute AI consultation for just $50. Unlock the potential
@@ -146,7 +198,7 @@ export default function Sections() {
       <section id="about" data-scene="about" className="scene">
         <div className="scene-inner">
           <Reveal>
-            <div className="kicker">05 — About · Mission</div>
+            <div className="kicker">06 — About · Mission</div>
             <h2 className="section-title">Technology enhances creativity, never replaces it</h2>
             <p className="section-sub" style={{ fontSize: 19 }}>
               Holocene Films is at the forefront of the cinematic revolution,
@@ -171,7 +223,7 @@ export default function Sections() {
       <section id="contact" data-scene="contact" className="scene" style={{ minHeight: "80vh" }}>
         <div className="scene-inner" style={{ textAlign: "center" }}>
           <Reveal>
-            <div className="kicker">06 — Contact · Closing Credits</div>
+            <div className="kicker">07 — Contact · Closing Credits</div>
             <h2 className="section-title">Let&apos;s make the future cinematic</h2>
             <p className="section-sub" style={{ margin: "16px auto 0" }}>
               Tell us about your vision — film, Web3, AI, or all three.
@@ -188,6 +240,7 @@ export default function Sections() {
           <div>
             <h4>Holocene Films</h4>
             <a href="#about">About</a>
+            <a href="#team">Team</a>
             <a href="#contact">Careers</a>
             <a href="#contact">Contact</a>
             <a href="#about">Metaverse</a>
@@ -198,6 +251,12 @@ export default function Sections() {
             <a href="#services">Application Development</a>
             <a href="#services">Blockchain</a>
             <a href="#services">AI Integration</a>
+          </div>
+          <div>
+            <h4>Company</h4>
+            <a href="#timeline">Timeline</a>
+            <a href="#team">Team</a>
+            <a href="#about">About</a>
           </div>
           <div>
             <h4>Legal</h4>

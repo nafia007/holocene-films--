@@ -2,9 +2,10 @@ export const SCENES = [
   { id: "hero", index: "01", label: "Vision", anchor: "hero" },
   { id: "services", index: "02", label: "Services", anchor: "services" },
   { id: "timeline", index: "03", label: "Timeline", anchor: "timeline" },
-  { id: "consult", index: "04", label: "Consult", anchor: "consult" },
-  { id: "about", index: "05", label: "Mission", anchor: "about" },
-  { id: "contact", index: "06", label: "Credits", anchor: "contact" },
+  { id: "team", index: "04", label: "Team", anchor: "team" },
+  { id: "consult", index: "05", label: "Consult", anchor: "consult" },
+  { id: "about", index: "06", label: "Mission", anchor: "about" },
+  { id: "contact", index: "07", label: "Credits", anchor: "contact" },
 ] as const;
 
 export const SERVICES = [
