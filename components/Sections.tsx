@@ -71,17 +71,9 @@ export default function Sections() {
               creators own their work and reach their audience directly. Come and
               watch our award-winning films on Timeline.
             </p>
-            <div style={{ display: "flex", gap: 14, flexWrap: "wrap" }}>
-              <MagneticButton href="https://timeline.uwu.ai/">
-                Open Timeline ↗
-              </MagneticButton>
-              <MagneticButton
-                secondary
-                href="mailto:info@holocenefilms.xyz?subject=Timeline%20early%20access"
-              >
-                Get early access →
-              </MagneticButton>
-            </div>
+            <MagneticButton href="https://timeline.uwu.ai/">
+              Get early access →
+            </MagneticButton>
           </Reveal>
         </div>
       </section>
