@@ -1,6 +1,6 @@
 "use client";
 import MagneticButton from "./MagneticButton";
-import { PROJECTS, SERVICES } from "@/lib/content";
+import { SERVICES } from "@/lib/content";
 
 function Reveal({ children }: { children: React.ReactNode }) {
   return <div className="reveal">{children}</div>;
@@ -55,31 +55,38 @@ export default function Sections() {
         </div>
       </section>
 
-      {/* SCENE 03 — PROJECTS */}
-      <section id="projects" data-scene="projects" className="scene">
+      {/* SCENE 03 — TIMELINE (flagship app) */}
+      <section id="timeline" data-scene="timeline" className="scene">
         <div className="scene-inner">
           <Reveal>
-            <div className="kicker">03 — Featured Projects · The Reel</div>
-            <h2 className="section-title">Selected transmissions</h2>
+            <div className="kicker">03 — Timeline · The Main App</div>
+            <h2 className="section-title">Timeline</h2>
+            <p className="section-sub" style={{ fontSize: 19 }}>
+              Our flagship streaming service, built for independent filmmakers —
+              by independent filmmakers.
+            </p>
+            <p className="section-sub">
+              Founded by filmmakers Weaam Williams and Nafia Kocks, Timeline is
+              the home for independent cinema: a streaming platform where indie
+              creators own their work and reach their audience directly.
+            </p>
+            <div style={{ display: "flex", gap: 14, flexWrap: "wrap" }}>
+              <MagneticButton href="https://timeline.uwu.ai/">
+                Open Timeline ↗
+              </MagneticButton>
+              <MagneticButton
+                secondary
+                href="mailto:info@holocenefilms.xyz?subject=Timeline%20early%20access"
+              >
+                Get early access →
+              </MagneticButton>
+            </div>
           </Reveal>
-          <div className="grid-2">
-            {PROJECTS.map((p) => (
-              <div key={p.title} className="card reveal">
-                <h3>{p.title}</h3>
-                <p>{p.body}</p>
-                <div className="tags">
-                  {p.tags.map((t) => (
-                    <span key={t} className="tag">{t}</span>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
       {/* LIVE NETWORK — deployed ecosystem */}
-      <section id="network" data-scene="projects" className="scene">
+      <section id="network" data-scene="timeline" className="scene">
         <div className="scene-inner">
           <Reveal>
             <div className="kicker">Live — The Ecosystem</div>
@@ -161,7 +168,7 @@ export default function Sections() {
             </p>
             <div style={{ display: "flex", gap: 14, flexWrap: "wrap" }}>
               <MagneticButton href="#contact" secondary>Join the Revolution →</MagneticButton>
-              <MagneticButton href="#projects" secondary>AI Showreel</MagneticButton>
+              <MagneticButton href="#timeline" secondary>Watch on Timeline</MagneticButton>
             </div>
           </Reveal>
         </div>
