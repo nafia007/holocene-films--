@@ -1,8 +1,10 @@
 "use client";
 import { useEffect, useState } from "react";
 import FilmBackground from "@/components/FilmBackground";
+import HudOverlay from "@/components/HudOverlay";
 import Navbar from "@/components/Navbar";
 import Preloader from "@/components/Preloader";
+import { MountainSilhouette } from "@/components/Parallax";
 import Sections from "@/components/Sections";
 import Timecode from "@/components/Timecode";
 
@@ -64,6 +66,8 @@ export default function Page() {
     <div className="grain">
       <Preloader />
       <FilmBackground staticFrame={reducedMotion} />
+      {!reducedMotion && <MountainSilhouette className="mountain-bg" />}
+      <HudOverlay active={active} progress={progress} />
       <Navbar active={active} />
       <Timecode active={active} progress={progress} />
       <main className="content-layer">

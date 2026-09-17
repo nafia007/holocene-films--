@@ -100,6 +100,198 @@ button { font-family: inherit; }
   box-shadow: inset 0 0 220px rgba(0,0,0,0.14);
 }
 
+/* ═══════════════════════════════════════════════════════════════════
+   HUD OVERLAY SYSTEM
+   ═══════════════════════════════════════════════════════════════════ */
+.hud-layer {
+  position: fixed;
+  inset: 0;
+  z-index: 55;
+  pointer-events: none;
+}
+/* REC bar */
+.hud-rec-bar {
+  position: absolute;
+  top: 14px; left: 28px; right: 28px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-family: monospace;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #00F5C0;
+  opacity: 0.7;
+}
+.hud-rec-dot {
+  color: #ff3b3b;
+  font-size: 14px;
+  transition: opacity 0.15s;
+}
+.hud-rec-label { font-weight: 600; }
+.hud-rec-tc { color: #F4F2ED; opacity: 0.85; margin-left: 8px; }
+.hud-rec-meter {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 9px;
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+.hud-rec-meter span:first-child {
+  display: inline-block;
+  width: 50px; height: 3px;
+  background: rgba(0,245,192,0.2);
+  border-radius: 2px;
+  position: relative;
+}
+.hud-rec-meter span:first-child::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #00F5C0;
+  border-radius: 2px;
+}
+
+/* Corner brackets */
+.hud-brackets {
+  position: absolute;
+  inset: 0;
+}
+.hud-bracket {
+  position: absolute;
+  width: 60px; height: 60px;
+  border-color: rgba(0,245,192,0.25);
+  border-style: solid;
+  border-width: 0;
+}
+.hud-bracket--tl { top: 14%; left: 8%; border-top-width: 1px; border-left-width: 1px; }
+.hud-bracket--tr { top: 14%; right: 8%; border-top-width: 1px; border-right-width: 1px; }
+.hud-bracket--bl { bottom: 18%; left: 8%; border-bottom-width: 1px; border-left-width: 1px; }
+.hud-bracket--br { bottom: 18%; right: 8%; border-bottom-width: 1px; border-right-width: 1px; }
+.hud-bracket-label {
+  position: absolute;
+  top: 14%; left: calc(8% + 70px);
+  font-family: monospace;
+  font-size: 9px;
+  letter-spacing: 0.15em;
+  color: #00F5C0;
+  opacity: 0.5;
+  white-space: nowrap;
+}
+
+/* Center reticle */
+.hud-reticle {
+  position: fixed;
+  top: 50%; left: 50%;
+  width: 120px; height: 120px;
+  transform: translate(-50%, -50%);
+  opacity: 0.2;
+  transition: transform 0.08s ease-out;
+}
+
+/* Neural trace canvas */
+.hud-neural {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Ledger ticker */
+.hud-ledger {
+  position: absolute;
+  bottom: 12px; left: 0; right: 0;
+  height: 22px;
+  overflow: hidden;
+  border-top: 1px solid rgba(0,245,192,0.08);
+  background: rgba(5,6,10,0.5);
+}
+.hud-ledger-strip {
+  display: flex;
+  white-space: nowrap;
+  font-family: monospace;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  color: #00F5C0;
+  opacity: 0.4;
+  will-change: transform;
+}
+.hud-ledger-strip span {
+  padding-right: 60px;
+}
+
+/* Transition burst */
+.hud-burst {
+  position: fixed;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 56;
+  font-family: monospace;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: #00F5C0;
+  text-shadow: 0 0 40px rgba(0,245,192,0.6), 0 0 80px rgba(0,245,192,0.3);
+  animation: burstFlash 0.45s ease-out forwards;
+}
+@keyframes burstFlash {
+  0% { opacity: 1; transform: translate(-50%, -50%) scale(1.1); filter: blur(0); }
+  70% { opacity: 0.7; }
+  100% { opacity: 0; transform: translate(-50%, -50%) scale(0.95); filter: blur(4px); }
+}
+
+/* Power down */
+.hud-powerdown {
+  position: absolute;
+  right: 28px; bottom: 44px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-family: monospace;
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  color: #00F5C0;
+  opacity: 0.4;
+  transition: opacity 0.8s;
+}
+.hud-powerdown.off span {
+  opacity: 0.2;
+  text-decoration: line-through;
+  color: #F4F2ED;
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   PARALLAX LAYERS
+   ═══════════════════════════════════════════════════════════════════ */
+.parallax-layer {
+  position: fixed;
+  inset: 0;
+  will-change: transform;
+  pointer-events: none;
+}
+.parallax-layer--bg { z-index: 0; }
+.parallax-layer--mid { z-index: 1; }
+.parallax-layer--fg { z-index: 55; }
+.parallax-layer--post { z-index: 58; }
+
+/* Mountain silhouette in parallax bg */
+.mountain-bg {
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  z-index: 0;
+  opacity: 0.25;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hud-burst { animation: none; display: none; }
+  .hud-neural { display: none; }
+  .hud-ledger-strip { animation: none; }
+  .hud-rec-dot { animation: none; opacity: 1; }
+  .parallax-layer { transform: none !important; }
+}
+
 .content-layer { position: relative; z-index: 2; }
 
 /* nav */
