@@ -68,7 +68,8 @@ export default function Sections() {
             <p className="section-sub">
               Founded by filmmakers Weaam Williams and Nafia Kocks, Timeline is
               the home for independent cinema: a streaming platform where indie
-              creators own their work and reach their audience directly.
+              creators own their work and reach their audience directly. Come and
+              watch our award-winning films on Timeline.
             </p>
             <div style={{ display: "flex", gap: 14, flexWrap: "wrap" }}>
               <MagneticButton href="https://timeline.uwu.ai/">
