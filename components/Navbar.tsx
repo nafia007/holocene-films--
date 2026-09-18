@@ -12,7 +12,7 @@ export default function Navbar({ active }: { active: string }) {
   return (
     <nav className="nav" style={{ boxShadow: `0 1px 40px ${glow}22` }}>
       <a href="#hero" className="nav-logo">
-        HOLOCENE <span>FILMS</span>
+        <img src="/logo.svg" alt="Holocene Films" style={{ height: 36, width: "auto" }} />
       </a>
       <div className="nav-links">
         {SCENES.map((s) => (

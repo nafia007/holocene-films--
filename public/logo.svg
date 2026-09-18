@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 160" fill="none">
+  <!-- Circle with HF monogram -->
+  <circle cx="80" cy="80" r="72" stroke="white" stroke-width="4" fill="none"/>
+  <!-- H -->
+  <path d="M50 40 L50 120 M50 80 L80 80 M80 40 L80 120" stroke="white" stroke-width="4" stroke-linecap="square"/>
+  <!-- F -->
+  <path d="M80 40 L110 40 M80 40 L80 120 M80 78 L105 78" stroke="white" stroke-width="4" stroke-linecap="square"/>
+  <!-- Holocene -->
+  <text x="170" y="85" font-family="Arial, Helvetica, sans-serif" font-size="72" font-weight="700" fill="white" letter-spacing="-2">Holocene</text>
+  <!-- Films -->
+  <text x="170" y="140" font-family="Arial, Helvetica, sans-serif" font-size="58" font-weight="300" fill="white" letter-spacing="6">Films</text>
+</svg>
