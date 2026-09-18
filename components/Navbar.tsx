@@ -27,15 +27,8 @@ export default function Navbar({ active }: { active: string }) {
         <a href="https://hacc.uwu.ai/" target="_blank" rel="noreferrer">
           HACC ↗
         </a>
-        <a href="#team">Team</a>
         <a href="#network">Live Sites</a>
-        <a href="#contact" title="Team, Blog, Metaverse, AI Showreel">
-          More
-        </a>
       </div>
-      <a className="nav-cta" href="#consult">
-        Book AI Consult — $50
-      </a>
     </nav>
   );
 }
