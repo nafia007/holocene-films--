@@ -89,16 +89,15 @@ export default function Sections() {
             </p>
           </Reveal>
           <div className="grid-2">
-            <div className="card reveal" style={{ padding: 0, overflow: "hidden" }}>
+            <div className="card team-card reveal">
               <img
                 src="/team/weaam-williams.jpg"
                 alt="Weaam Williams"
-                style={{ width: "100%", aspectRatio: "4/3", objectFit: "cover", display: "block" }}
               />
-              <div style={{ padding: "24px" }}>
-                <h3 style={{ fontSize: 26, marginBottom: 4 }}>Weaam Williams</h3>
-                <p style={{ fontSize: 15, color: "#00F5C0", marginBottom: 14, letterSpacing: "0.08em" }}>CEO</p>
-                <p style={{ fontSize: 14.5, lineHeight: 1.7, opacity: 0.85 }}>
+              <div className="team-card-body">
+                <h3>Weaam Williams</h3>
+                <p className="role" style={{ color: "#00F5C0" }}>CEO</p>
+                <p>
                   Weaam Williams is an award-winning screenwriter, director, actor and poet. She has found her voice
                   as a woman and activist using cinema, and launched her "Two Hues" feature film as Africa&apos;s first Web3
                   film project. She is passionate about transformation in the film and arts sector, and is hence
@@ -108,16 +107,15 @@ export default function Sections() {
                 </p>
               </div>
             </div>
-            <div className="card reveal" style={{ padding: 0, overflow: "hidden" }}>
+            <div className="card team-card reveal">
               <img
                 src="/team/nafia-kocks.jpg"
                 alt="Nafia Kocks"
-                style={{ width: "100%", aspectRatio: "4/3", objectFit: "cover", display: "block" }}
               />
-              <div style={{ padding: "24px" }}>
-                <h3 style={{ fontSize: 26, marginBottom: 4 }}>Nafia Kocks</h3>
-                <p style={{ fontSize: 15, color: "#7A5CFF", marginBottom: 14, letterSpacing: "0.08em" }}>CTO</p>
-                <p style={{ fontSize: 14.5, lineHeight: 1.7, opacity: 0.85 }}>
+              <div className="team-card-body">
+                <h3>Nafia Kocks</h3>
+                <p className="role" style={{ color: "#7A5CFF" }}>CTO</p>
+                <p>
                   Nafia is certified in blockchain, cryptography, Rust and Solidity. He is an avid developer and creative
                   in the Web3 space. He has worked as a cinematographer and editor in the film industry for the past 16
                   years. He is the cinematographer and finishing editor for the award-winning films, "Hip hop Revolution",
@@ -238,13 +236,14 @@ export default function Sections() {
       <footer className="footer">
         <div className="footer-grid">
           <div>
-            <h4>Holocene Films</h4>
+            <div className="footer-logo">
+              <img src="/logo.svg" alt="Holocene Films" />
+            </div>
             <a href="#about">About</a>
             <a href="#team">Team</a>
             <a href="#contact">Careers</a>
             <a href="#contact">Contact</a>
             <a href="#about">Metaverse</a>
-            <a href="#projects">HACC</a>
           </div>
           <div>
             <h4>Services</h4>
