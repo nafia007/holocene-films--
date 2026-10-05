@@ -144,7 +144,7 @@ export default function Sections() {
               ["Holocene RWA", "holocene-rwa.uwu.ai", "https://holocene-rwa.uwu.ai/"],
               ["AFD Submissions", "afd-submissions.uwu.ai", "https://afd-submissions.uwu.ai/"],
               ["Khwa AI Research", "khwa-ai-research.uwu.ai", "https://khwa-ai-research.uwu.ai/"],
-              ["Holo Routes", "holo-routes.vercel.app", "https://holo-routes.vercel.app/"],
+              ["Moogulator Studio", "moogulator-studio.lovable.app", "https://moogulator-studio.lovable.app/"],
               ["StockMag", "stockmag.uwu.ai", "https://stockmag.uwu.ai/"],
             ].map(([title, host, url]) => (
               <a
